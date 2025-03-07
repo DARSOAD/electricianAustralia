@@ -20,8 +20,8 @@ const About = ({ data }: ServiceProps) => {
         className="
         relative 
         py-36 
-        bg-[url('/layout1_mobile.webp')]
-        lg:bg-[url('/layout1.webp')]
+        bg-[url('/layout1_mobile.png')]
+        lg:bg-[url('/layout1.png')]
         bg-cover
         bg-top 
         bg-no-repeat
@@ -41,7 +41,7 @@ const About = ({ data }: ServiceProps) => {
         {/* Columna Izquierda - Texto y Características */}
         <div className="px-6 w-full lg:w-[60%] text-left space-y-6 ">
             <h2 className="text-2xl lg:text-3xl font-sans font-extralight lg:absolute lg:top-40 lg:left-[11%] lg:z-10 leading-tight text-white 2xl:text-4xl 2xl:left-[9%]">
-                Sydney’s best commercial cleaning, we’ll beat any price!
+                Sydney’s Best Electricians – We’ll Beat Any Price!
             </h2>
             <Features />
             <div className="hidden lg:block absolute bottom-8">
