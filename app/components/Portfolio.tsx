@@ -10,6 +10,7 @@ import { IoIosArrowForward } from "react-icons/io";
 interface ServiceItemData {
     title: string;
     description: string;
+    descriptionmobile:string;
     image: string;
     includes: Record<string, string | undefined>;
 }
@@ -92,10 +93,10 @@ function Portfolio({ data }: ServiceProps) {
                                         <div>
                                             <p className="text-gray-800 font-sans font-extralight lg:hidden">
                                                 {isMobile
-                                                    ? service.description.length > 150
-                                                        ? service.description.substring(0, 150) + "..."
-                                                        : service.description
-                                                    : service.description}
+                                                    ? service.descriptionmobile.length > 150
+                                                        ? service.descriptionmobile.substring(0, 150) + "..."
+                                                        : service.descriptionmobile
+                                                    : service.descriptionmobile}
                                             </p>
                                         </div>
                                     </div>
@@ -151,7 +152,7 @@ function Portfolio({ data }: ServiceProps) {
                                         height={600} // 📌 Next.js necesita dimensiones específicas
                                         layout="responsive" // 📌 Hace que la imagen se adapte al contenedor
                                         objectFit="cover" // 📌 Mantiene la proporción de la imagen
-                                        className="lg:object-cover lg:bottom-0"
+                                        className="lg:object-cover lg:bottom-0 overflow-hidden"
                                         priority={index === 0} // 📌 Carga la primera imagen con prioridad
                                     />
                                 </div>
