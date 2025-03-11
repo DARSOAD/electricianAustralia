@@ -14,6 +14,7 @@ import Companies from "./components/Companies";
 import Services from "./components/Services";
 import Choose from "./components/Choose";
 import Footer from "./components/Footer";
+import Ourjob from "./components/Ourjob";
 
 // const products = initialData.products;
 // const productsTop = initialData.productsTop;
@@ -29,6 +30,7 @@ export default function Home() {
       <TestimoniialTwo data={testimonialData}/>
       <Companies data={companiesData}/>
       <Services data={servicesData}/>
+      <Ourjob/>
       <Choose data={servicesEspecificData}/>
       <Footer/>
       

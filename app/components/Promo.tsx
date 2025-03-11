@@ -33,12 +33,12 @@ export default function Promo() {
             {/* Beneficios con íconos */}
 
             <div className="flex flex-col items-start w-64 ml-auto  font-extralight font-sans text-left text-xs lg:text-lg lg:w-[60%] leading-none lg:leading-6 2xl:text-xl 2xl:w-2/5 ">
-                <p className="mt-6 leading-none text-gray-400 text-xs lg:text-xs 2xl:text-xl lg:leading-[1] ">
+                <p className="mt-6 leading-none text-gray-500 text-xs lg:text-xs 2xl:text-xl lg:leading-[1] ">
                     A clean workspace is essential for productivity, professionalism, and a lasting impression.
                     We offer high-quality commercial cleaning at unbeatable prices – and if you find a lower quote,
                     we’ll match it or beat it!
                 </p>
-                <ul className="pt-2  lg:leading-[1] lg:text-xs text-gray-400">
+                <ul className="pt-2  lg:leading-[1] lg:text-xs text-gray-500">
                     {[
                         "Best Price Guarantee – We’ll match or beat any competitor’s quote",
                         "Licensed & Experienced Electricians for all jobs, big or small",
