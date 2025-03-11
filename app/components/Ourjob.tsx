@@ -6,6 +6,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import { IoIosArrowForward } from "react-icons/io";
 
 const carouselItems = [
   {
@@ -32,8 +33,9 @@ const Ourjob: React.FC = () => {
   return (
     <section className="flex flex-row items-center justify-center py-10 bg-gray-100">
       {/* Columna del título */}
-      <div className="w-1/3 pl-10">
+      <div className="w-1/3 flex flex-col lg:flex-row items-center lg:items-start space-x-2">
         <h2 className="text-left text-ms font-semibold lg:ml-32 lg:w-20 ">Our job talk for us </h2>
+        <IoIosArrowForward className="mt-3 lg:mt-6 pt-2 -ml-2 w-5 h-5 text-gray-800 lg:block lg:h-20" />
       </div>
 
       {/* Columna del carrusel */}
