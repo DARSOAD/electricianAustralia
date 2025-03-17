@@ -44,7 +44,7 @@ const About = ({ data }: ServiceProps) => {
                 Sydney’s Best Electricians – We’ll Beat Any Price!
             </h2>
             <Features />
-            <div className="hidden lg:block absolute bottom-8">
+            <div className="hidden lg:block absolute bottom-8 lg:ml-3">
                 <ReviewsImages />
             </div>
         </div>

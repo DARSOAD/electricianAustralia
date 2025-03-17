@@ -3,67 +3,82 @@
 import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
+import 'swiper/css/bundle';
 import { IoIosArrowForward } from "react-icons/io";
 
 const carouselItems = [
   {
     id: 1,
-    image: "",
-    title: "Project ",
+    image: "/carrusel1.webp",
+    title: "Project",
     description: "Installation of lights in Marrickville."
   },
   {
     id: 2,
-    image: "",
-    title: "Project ",
+    image: "carrusel2.webp",
+    title: "Project",
     description: "Installation of lights in Marrickville."
   },
   {
     id: 3,
-    image: "",
-    title: "Project ",
+    image: "carrusel1.webp",
+    title: "Project",
     description: "Installation of lights in Marrickville."
   }
 ];
 
-const Ourjob: React.FC = () => {
+const OurJob: React.FC = () => {
   return (
-    <section className="flex flex-row items-center justify-center py-10 bg-gray-100">
-      {/* Columna del título */}
-      <div className="w-1/3 flex flex-col lg:flex-row items-center lg:items-start space-x-2">
-        <h2 className="text-left text-ms font-semibold lg:ml-32 lg:w-20 ">Our job talk for us </h2>
-        <IoIosArrowForward className="mt-3 lg:mt-6 pt-2 -ml-2 w-5 h-5 text-gray-800 lg:block lg:h-20" />
-      </div>
+    <section className="work-card lg:py-20 sm:py-14 py-10 bg-[#f9f9fa]">
+      <div className="container flex sm:flex-col lg:flex-row items-center lg:items-start">
+        
+         {/* Columna del título y flecha */}
+         <div className="w-[40%] sm:w-full lg:w-1/5 flex flex-row items-start justify-center pl-6 sm:pl-10 lg:pl-16 mb-6 sm:mb-8  lg:mt-64 ">
+          <h3 className="font-sans text-left text-gray-800 text-lg sm:text-xl lg:!text-2xl leading-[1.1] tracking-tight">
+            Our job <br /> talk for us
+          </h3>
+          <IoIosArrowForward className="mt-2 w-5 h-5 text-gray-800 sm:w-6 sm:h-6 lg:mt-4" />
+        </div>
 
-      {/* Columna del carrusel */}
-      <div className="w-2/3">
+        {/* Columna del carrusel */}
+        <div className="w-[60%] sm:w-full lg:w-4/5">
         <Swiper
-          spaceBetween={20}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{ delay: 10000 }}
-          pagination={{ clickable: true }}
-          modules={[Pagination, Autoplay]}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            1024: { slidesPerView: 2 }
-          }}
-          className="w-full"
-        >
-          {carouselItems.map((item) => (
-            <SwiperSlide key={item.id} className="flex flex-col items-center p-4">
-              <img src={item.image} alt={item.title} className="w-60 h-40 object-cover rounded-lg mb-4" />
-              <h3 className="text-xl font-bold">{item.title}</h3>
-              <p className="text-gray-600 text-center">{item.description}</p>
-            </SwiperSlide>
-          ))}
+            spaceBetween={20}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{ delay: 10000 }}
+            pagination={{
+                clickable: true,
+                el: ".custom-pagination",
+                horizontalClass: "swiper-pagination-horizontal",
+            }}
+            modules={[Pagination, Autoplay]}
+            direction="horizontal"
+            breakpoints={{
+                640: { slidesPerView: 1, spaceBetween: 20 },
+                1024: { slidesPerView: 2, spaceBetween: 30 },
+            }}
+            className="h-full relative"
+              >
+            {carouselItems.map((item) => (
+                <SwiperSlide key={item.id} className="flex flex-col items-start p-4">
+                    <div className="flex justify-start w-full">
+                        <img 
+                            src={item.image} 
+                            alt={item.title} 
+                            className="w-full max-w-[400px] lg:max-w-[500px] h-auto object-cover rounded-lg mb-4"
+                        />
+                    </div>
+                    <h3 className="text-xl font-bold text-left w-full">{item.title}</h3>
+                    <p className="text-gray-600 text-left w-full">{item.description}</p>
+                </SwiperSlide>
+            ))}
         </Swiper>
+        </div>
+
       </div>
     </section>
   );
 };
 
-export default Ourjob;
+export default OurJob;

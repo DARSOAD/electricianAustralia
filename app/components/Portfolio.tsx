@@ -77,7 +77,7 @@ function Portfolio({ data }: ServiceProps) {
     
     return (
         
-        <section className="work-card section-padding pb-0 bg-[#f9f9fa] lg:w-[90%] lg:ml-[5%] 2xl:ml-[5%]">
+        <section className="work-card section-padding pb-0 bg-[#f9f9fa] w-full lg:w-[90%] mx-auto">
             <div className="container  lg:!w-full">
                 <div className="cards ">
                     {data.map((service, index) => (

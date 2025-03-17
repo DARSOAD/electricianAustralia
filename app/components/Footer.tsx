@@ -25,22 +25,22 @@ const Footer = () => {
                         </div>
                        
                         {/* Logo y Contacto */}
-                        <div className="flex flex-col items-start">
-                            <Logo
+                        <div className="flex flex-col items-start ml-12 lg:mt-14">
+                            {/* <Logo
                                 src="/oasis-logo.svg"
                                 alt="Oasis Logo"
                                 className="hidden lg:block"
                                 width={120}
                                 height={40}
-                            />
-                            <p className="text-white text-sm mt-2">
+                            /> */}
+                            <p className="text-slate-500 text-sm mt-2">
                                 Professional Commercial Cleaning Services – Keep Your Workplace Spotless & Productive
                             </p>
-                            <a href="tel:+611300082727" className="mt-2 text-white text-sm">
+                            <a href="tel:+611300082727" className="mt-2 text-slate-500 text-sm">
                                 1300 082 727
                             </a>
 
-                            <p className="text-white text-sm">
+                            <p className="text-slate-500 text-sm">
                                 manager@commercialcleaningsydney.com
                             </p>
                         </div>
