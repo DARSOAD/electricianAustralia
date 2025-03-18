@@ -58,9 +58,16 @@ export default function Promo() {
 
             </div>
             {/* Beneficios */}
-            <div className="ml-5 mt-100 pb-8 px-4 w-50 transform grid grid-cols-1 gap-6 text-white font-light text-xm text-center lg:grid-cols-4
-                             lg:text-lg lg:mt-52lg:mt-[500px] 2xl:mt-[800px] 2xl:px-36 2xl:text-2xl 2xl:pb-20 justify-end">
-                <p className="leading-none">Power your space with confidence! Get a free quote in 1 hour!
+            <div className="mt-100 pb-8 px-4 w-50 transform grid grid-cols-2 gap-6 text-white font-light text-xm text-center lg:grid-cols-3
+                            lg:text-lg lg:mt-52lg:mt-[500px] 2xl:mt-[800px] 2xl:px-36 2xl:text-2xl 2xl:pb-20 justify-end lg:w-[60%] lg:ml-auto">
+                <p className="leading-none">
+                    Power your space with confidence! Get a free quote in just 1 hour – fast, reliable, and hassle-free!
+                </p>
+                <p className="leading-none">
+                    Spark Up Safety & Savings! Book your free electrical assessment today – no obligations, just peace of mind.
+                </p>
+                <p className="leading-none hidden md:block">
+                    Illuminate your space with expert care! Get a free, no-obligation quote in just 60 minutes – precision and professionalism guaranteed.
                 </p>
             </div>
         </section>
