@@ -4528,11 +4528,6 @@ footer.clean-footer.crev .circle-blur {
     border-radius: 10px;
 }
 
-.swiper-pagination-bullet {
-    display: block;
-    background: transparent;
-}
-
 .swiper-pagination-bullet-active .path {
     display: inline-block !important;
     stroke-dasharray: 1000;

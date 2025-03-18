@@ -1,6 +1,5 @@
 "use client";
 import { FaPhoneAlt } from "react-icons/fa";
-import Logo from "@/public/images/logo.svg";
 import servicesData from "../data/dataServices.json";
 import Link from "next/link";
 
