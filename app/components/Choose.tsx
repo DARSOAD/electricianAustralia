@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Form from "./choose/Form";
 
 interface ServiceItemData {
@@ -15,73 +16,101 @@ interface ServiceProps {
 
 const Choose = ({ data }: ServiceProps) => {
     return (
-        <section id="about" 
-        className="
+        <section
+            id="choose"
+            className="
         relative 
-        bg-[url('/layout5_mobile.png')]  
-        lg:bg-[url('/layout5.png')]
-        bg-cover
-        bg-top 
-        bg-no-repeat
         text-center
-        h-[70vh]
-        lg:h-screen
-        flex flex-col 
-        lg:flex-row
-        justify-start
-        items-center 
+        h-auto lg:h-screen
+        flex flex-col lg:flex-row
+        justify-start lg:justify-center
+        items-center lg:items-start
         w-full
-        lg:pl-0
-        lg:pr-0 
-        lg:items-start
-        lg:justify-center
-        "
-    > {/*Texto para celular */}
-        <div className="px-16 w-full text-left space-y-0 lg:hidden mt-16">
-            <h5 className="leading-1 text-xs lg:text-lg font-sans font-extralight text-[#ffffff]">
-                Why Choose Us for Commercial Cleaning in Sydney?
-            </h5>
-            <p  className="leading-1 text-xs lg:text-lg font-sans font-extralight text-[#ffffff] ">
-                At Oasis, we deliver high-quality, reliable, and affordable commercial cleaning services.
-                <br/>
-                Whether you run a corporate office, retail store, warehouse, or hospitality space, we ensure your workplace is spotless, hygienic, and inviting.
-            </p>
-            <h5 className="leading-1 text-xs lg:text-lg font-sans font-extralight text-[#ffffff]">
-                Let’s make your business shine! Get a free quote in just 1 hour! 
-            </h5>
-        </div>
-    <div className="lg:!hidden flex px-16 w-full lg:w-[60%]">
-            <Form data={data} />            
-    </div>
-    {/* Texto para computador */}
-        <div className="px-6  text-left space-y-0 hidden lg:block lg:ml-52  pt-32">
-            <h5 className="hidden text-sm font-sans font-thin text-white lg:block">
-                Why Choose Us for Commercial Cleaning in Sydney?
-            </h5>
-            <p  className="hidden text-sm font-sans font-thin text-white  lg:block">
-                At Oasis, we deliver high-quality, reliable, and affordable commercial cleaning services.
-                <br/>
-                Whether you run a corporate office, retail store, warehouse, or hospitality space, we ensure your workplace is spotless, hygienic, and inviting.
-            </p>
-            <h5 className="text-sm font-sans font-thin text-white">
-                Let’s make your business shine! Get a free quote in just 1 hour! 
-            </h5>
-
-            <div className="hidden lg:flex  h-full lg:w-full lg:mr-1 justify-start max-w-2xl">
-                <Form data={data}/>            
+      "
+        >
+            {/* Imagen de fondo optimizada */}
+            <div className="absolute inset-0 w-full h-full">
+                <Image
+                    src="/layout5_mobile.png"
+                    alt="Background Mobile"
+                    fill
+                    className="object-cover object-top lg:hidden"
+                    priority
+                />
+                <Image
+                    src="/layout5.png"
+                    alt="Background Desktop"
+                    fill
+                    className="object-cover object-top hidden lg:block"
+                    priority
+                />
             </div>
-        </div>
-        
 
-    
+            {/* Contenido para móviles */}
+            <div className="relative px-16 w-full text-left mt-16 lg:hidden">
+                <h5 className="text-xs font-sans font-extralight text-white">
+                    Why Choose Us for Commercial Cleaning in Sydney?
+                </h5>
+                <p className="text-xs font-sans font-extralight text-white">
+                    At Oasis, we deliver high-quality, reliable, and affordable commercial cleaning services.
+                    <br />
+                    Whether you run a corporate office, retail store, warehouse, or hospitality space, we ensure your workplace is spotless, hygienic, and inviting.
+                </p>
+                <h5 className="text-xs font-sans font-extralight text-white">
+                    Let’s make your business shine! Get a free quote in just 1 hour!
+                </h5>
+            </div>
 
-        {/* Imagen */}
-        <img src="/form2Mobile.png"  className="w-full h-auto mt-4 lg:hidden rounded-lg  "
-            />
-        <img src="/form2Pc.png"  
-            className="hidden lg:block w-[45%] h-full object-cover lg:mr-0"/>
-    </section>
-    
+            {/* Formulario para móviles */}
+            <div className="relative flex px-16 w-full lg:w-[60%] lg:!hidden">
+                <Form data={data} />
+            </div>
+
+            {/* Contenido para escritorio */}
+            <div className="relative text-left hidden lg:flex flex-row lg:ml-52 h-full lg:w-full">
+                <div className="w-[55%] pt-32 px-6">
+                    <h5 className="text-sm font-sans font-thin text-white">
+                        Why Choose Us for Commercial Cleaning in Sydney?
+                    </h5>
+                    <p className="text-sm font-sans font-thin text-white">
+                        At Oasis, we deliver high-quality, reliable, and affordable commercial cleaning services.
+                        <br />
+                        Whether you run a corporate office, retail store, warehouse, or hospitality space, we ensure your workplace is spotless, hygienic, and inviting.
+                    </p>
+                    <h5 className="text-sm font-sans font-thin text-white">
+                        Let’s make your business shine! Get a free quote in just 1 hour!
+                    </h5>
+
+                    {/* Formulario para escritorio */}
+                    <div className="hidden lg:flex h-[25%] lg:w-full lg:mr-1 justify-start max-w-2xl mt-[10%]">
+                        <Form data={data} />
+                    </div>
+                </div>
+
+                {/* Imágenes responsivas */}
+                <div className="relative w-[45%] h-full flex ml-auto">
+                    <Image
+                        src="/form2Pc.png"
+                        alt="Form Desktop"
+                        width={700}
+                        height={700}
+                        className="h-full w-full object-cover"
+                    />
+                </div>
+
+            </div>
+
+            {/* Imágenes responsivas */}
+            <div className="relative w-full lg:hidden">
+                <Image
+                    src="/form2Mobile.png"
+                    alt="Form Mobile"
+                    width={500}
+                    height={500}
+                    className="w-full h-auto mt-4  rounded-lg"
+                />
+            </div>
+        </section>
     );
 };
 

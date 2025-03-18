@@ -25,7 +25,7 @@ export default function Promo() {
             </div>
             <div className="mt-50  text-left ml-48 lg:text-2xl lg:w-[50%]  text-gray-500 lg:ml-[50%] lg:!text-center">
                 <h3 className="font-extralight mb-0 hidden lg:block">We’ll beat any competitor’s price, Guaranteed!</h3>
-                <p className="font-light w-40 lg:w-full">Found a cheaper electrical  quote?</p>
+                <p className="font-light w-40 lg:w-full leading-none">Found a cheaper electrical  quote?</p>
                 <p className="font-extralight">We’ll match it or beat it!</p>
             </div>
 
@@ -58,17 +58,13 @@ export default function Promo() {
 
             </div>
             {/* Beneficios */}
-            <div className="mt-100 pb-8 px-4 w-50 transform grid grid-cols-2 gap-6 text-white font-light text-xm text-center lg:grid-cols-3
-                            lg:text-lg lg:mt-52lg:mt-[500px] 2xl:mt-[800px] 2xl:px-36 2xl:text-2xl 2xl:pb-20 justify-end lg:w-[60%] lg:ml-auto">
+            <div className="ml-5 mt-100 pb-8 px-4 w-50 transform grid grid-cols-2 gap-6 text-white font-light text-xm text-center lg:grid-cols-3 lg:text-lg lg:mt-52lg:mt-[500px] 2xl:mt-[800px] 2xl:px-36 2xl:text-2xl 2xl:pb-20 justify-end">
                 <p className="leading-none">
-                    Power your space with confidence! Get a free quote in just 1 hour – fast, reliable, and hassle-free!
+                    Power your space with confidence! Get a free quote in 1 hour!
                 </p>
-                <p className="leading-none">
-                    Spark Up Safety & Savings! Book your free electrical assessment today – no obligations, just peace of mind.
+                <p className="leading-none">Power your space with confidence! Get a free quote in 1 hour!
                 </p>
-                <p className="leading-none hidden md:block">
-                    Illuminate your space with expert care! Get a free, no-obligation quote in just 60 minutes – precision and professionalism guaranteed.
-                </p>
+                <p className="leading-none hidden lg:block">Spark Up Safety & Savings! Book Your Complimentary Electrical Assessment Now - Zero Obligation, Maximum Peace of Mind.</p>
             </div>
         </section>
     );

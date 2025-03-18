@@ -38,7 +38,7 @@ const OurJob: React.FC = () => {
           <h3 className="font-sans text-left text-gray-800 text-lg sm:text-xl lg:!text-2xl leading-[1.1] tracking-tight">
             Our job <br /> talk for us
           </h3>
-          <IoIosArrowForward className="mt-2 w-5 h-5 text-gray-800 sm:w-6 sm:h-6 lg:mt-4" />
+          <IoIosArrowForward className="mt-6 w-5 h-5 text-gray-800 sm:w-6 sm:h-6 lg:mt-4" />
         </div>
 
         {/* Columna del carrusel */}
@@ -72,8 +72,8 @@ const OurJob: React.FC = () => {
                     className="w-full max-w-[400px] lg:max-w-[500px] h-auto object-cover rounded-lg mb-4"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-left w-full">{item.title}</h3>
-                <p className="text-gray-600 text-left w-full">{item.description}</p>
+                <h3 className="text-left w-full text-gray-600 font-semibold text-xs uppercase">{item.title}</h3>
+                <p className="text-gray-600 text-left w-full leading-none">{item.description}</p>
               </SwiperSlide>
             ))}
           </Swiper>
