@@ -34,7 +34,7 @@ export default function Promo() {
 
             <div className="flex flex-col items-start w-64 ml-auto  font-extralight font-sans text-left text-xs lg:text-lg lg:w-[60%] leading-none lg:leading-6 2xl:text-xl 2xl:w-[50%] ">
                 <p className="mt-6 leading-none text-gray-500 text-xs lg:text-xs 2xl:text-xl lg:leading-[1] ">
-                A safe and efficient electrical system is essential for productivity, safety, and peace of mind. We provide top-quality electrical services at unbeatable prices - and if you find a lower quote, we'll match it or beat it!
+                A safe and efficient electrical system is essential for productivity, safety, and peace of mind. We provide top-quality electrical services at unbeatable prices - and if you find a lower quote, we’ll match it or beat it!
                 </p>
                 <ul className="pt-2 font-extralight lg:leading-[1] lg:text-xs text-gray-500">
                     {[
