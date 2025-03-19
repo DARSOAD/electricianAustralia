@@ -10,8 +10,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Commercial cleaning sydney",
-  description: "Sydney’s best commercial cleaning, we’ll beat any price!",
+  title: "Electrician sydney",
+  description: "Sydney’s best electrical solutions, we’ll beat any price!",
 };
 
 export default function RootLayout({

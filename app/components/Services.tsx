@@ -24,8 +24,8 @@ export default function Services({ data, classname }: ServiceProps) {
         <section className={`testimonial-block sm:py-14 py-10 bg-[#f9f9fa] ${classname}`}>
             <div className="flex flex-col w-full">
                 <div className="heading lg:px-8 lg:py-8">
-                    <h3 className="font-sans text-center text-gray-600 lg:!text-2xl leading-none">Commercial cleaning services</h3>
-                    <p className="font-sans text-center text-gray-500 lg:!text-2xl leading-none">Sydney-Wide Cleaning Services - Every space, perfectly cleaned</p>
+                    <h3 className="font-sans text-center text-gray-600 lg:!text-2xl leading-none">Electrician Syndey</h3>
+                    <p className="font-sans text-center text-gray-500 lg:!text-2xl leading-none">Sydney-Wide Electrician Services</p>
                 </div>
                 <div className="list-testimonials md:mt-10 mt-7 w-full px-5 lg:pl-20 lg:pr-20 2xl:pr-56 2xl:pl-64">
                 <Swiper

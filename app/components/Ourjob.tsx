@@ -31,18 +31,18 @@ const carouselItems = [
 const OurJob: React.FC = () => {
   return (
     <section className="work-card lg:py-20 sm:py-14 py-10 bg-[#f9f9fa]">
-      <div className="container flex sm:flex-col lg:flex-row items-center lg:items-start">
+      <div className="flex sm:flex-col lg:flex-row items-center lg:items-start">
         
         {/* Columna del título y flecha */}
-        <div className="w-[40%] sm:w-full lg:w-1/5 flex flex-row items-start justify-center pl-6 sm:pl-10 lg:pl-16 mb-6 sm:mb-8  lg:mt-64">
+        <div className="w-[40%] sm:w-full lg:w-2/5 flex flex-row items-start justify-center pl-6 sm:pl-10 lg:pl-16 mb-6 sm:mb-8  lg:mt-64">
           <h3 className="font-sans text-left text-gray-800 text-lg sm:text-xl lg:!text-2xl leading-[1.1] tracking-tight">
             Our job <br /> talk for us
           </h3>
-          <IoIosArrowForward className="mt-6 w-5 h-5 text-gray-800 sm:w-6 sm:h-6 lg:mt-4" />
+          <IoIosArrowForward className="mt-6 w-5 h-5 text-gray-800 sm:w-6 sm:h-6 lg:mt-9" />
         </div>
 
         {/* Columna del carrusel */}
-        <div className="w-[60%] sm:w-full lg:w-4/5">
+        <div className="w-[60%] sm:w-full lg:w-3/5">
           <Swiper
             spaceBetween={20}
             slidesPerView={1}
