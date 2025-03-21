@@ -2,6 +2,7 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { useState, useEffect } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { sendEmail } from "@/app/services/api"; // Importa la función para enviar el correo
 
 interface ServiceItemData {
     title: string;
@@ -56,16 +57,7 @@ export default function Form({ data }: ServiceProps) {
                 return;
             }
 
-            const response = await fetch("https://commercialcleaningsydney.com/public/sendMail.php", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                },
-                body: new URLSearchParams(formData).toString(),
-            });
-
-            const result = await response.json();
-            alert(result.message);
+            const result = await await sendEmail(formData);
 
             if (result.success) {
                 // 🔥 Registra la conversión en Google Ads

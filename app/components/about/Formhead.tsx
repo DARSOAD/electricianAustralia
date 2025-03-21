@@ -2,6 +2,7 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { useState, useEffect } from "react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { sendEmail } from "@/app/services/api"; // Importa la función para enviar el correo
 
 interface ServiceItemData {
     title: string;
@@ -56,16 +57,8 @@ export default function Formhead({ data }: ServiceProps) {
                 return;
             }
 
-            const response = await fetch("https://commercialcleaningsydney.com/public/sendMail.php", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                },
-                body: new URLSearchParams(formData).toString(),
-            });
+            const result = await sendEmail(formData);
 
-            const result = await response.json();
-            alert(result.message);
             setErrorMessage("");
 
             if (result.success) {
@@ -73,11 +66,11 @@ export default function Formhead({ data }: ServiceProps) {
                 setFormData({ companyName: "", mobile: "", service: "" });
 
                 // 🔥 Registra la conversión en Google Ads
-                if (typeof window !== "undefined" && window.gtag) {
-                    window.gtag("event", "conversion", {
-                        send_to: "AW-16885861325/kCGVCK36laYaEM2X5_M-",
-                    });
-                }
+                // if (typeof window !== "undefined" && window.gtag) {
+                //     window.gtag("event", "conversion", {
+                //         send_to: "AW-16885861325/kCGVCK36laYaEM2X5_M-",
+                //     });
+                // }
             }
         } catch (error) {
             setErrorMessage("Error sending the email.");
